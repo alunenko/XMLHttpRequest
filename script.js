@@ -17,7 +17,7 @@ function makeRequest() {
 
 	if (xhr) {
 		xhr.onreadystatechange = showState;
-		xhr.open("GET", "03_03.xml", true);
+		xhr.open("GET", "colors.xml", true);
 		xhr.send(null);
 	} else {
 		document.getElementById("updateArea").innerHTML = 
@@ -26,9 +26,16 @@ function makeRequest() {
 }
 
 function showState() {
-	var currMsg = document.getElementById("updateArea").innerHTML;
-	
-	document.getElementById("updateArea").innerHTML = 
-	currMsg + "<p>The current state is " + xhr.readyState + 
-	"and the status is " + xhr.status + "</p>";
+	var outMsg;
+	if (xhr.readyState == 4) {
+		if (xhr.status == 200) {
+			var outMsg = xhr.responseText;
+		} else {
+			var outMsg = "There was a problem with the request: readyState(" + 
+				xhr.readyState + "), status(" + 
+				xhr.status + ")";
+		}
+
+		document.getElementById("updateArea").innerHTML = outMsg;
+	}
 }
