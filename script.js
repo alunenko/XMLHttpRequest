@@ -1,6 +1,21 @@
-window.onload = makeRequest;
+window.onload = initAll;
 
-var xhr = false;
+var xhr = false,
+	textRequest;
+
+function initAll() {
+	document.getElementById("requestText").onclick = function () {
+		textRequest = true;
+		makeRequest();
+		return false;
+	}
+
+	document.getElementById("requestXML").onclick = function () {
+		textRequest = false;
+		makeRequest();
+		return false;
+	}
+}
 
 function makeRequest() {
 	if (window.XMLHttpRequest) {
@@ -29,7 +44,7 @@ function showState() {
 	var outMsg;
 	if (xhr.readyState == 4) {
 		if (xhr.status == 200) {
-			var outMsg = xhr.responseText;
+			var outMsg = (textRequest) ? xhr.responseText : xhr.responseXML;
 		} else {
 			var outMsg = "There was a problem with the request: readyState(" + 
 				xhr.readyState + "), status(" + 
