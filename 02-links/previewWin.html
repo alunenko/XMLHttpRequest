@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Preview Window</title>
+		<style>
+			#preview-window {
+				background-color: lightgreen;
+				width: 150px;
+				height: 200px;
+				padding: 5px;
+				position: absolute;
+				visibility: hidden;
+				border: 1px solid black;
+				overflow: hidden;
+			}
+
+			#preview-window h1 {
+				margin: 0;
+			}
+		</style>
+		<script src="previewWin.js"></script>
+	</head>
+	<body>
+		<h2>Preview Window</h2>
+		<ul>
+			<li><a href="links/001.html">page 001</a></li>
+			<li><a href="links/002.html">page 002</a></li>
+			<li><a href="links/003.html">page 003</a></li>
+			<li><a href="links/004.html">page 004</a></li>
+		</ul>
+
+		<div id="preview-window"></div>
+	</body>
+</html>
