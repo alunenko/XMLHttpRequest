@@ -7,7 +7,7 @@
 	position: absolute;
 }
 
-#searchField.error {
+#colorField.error {
 	background-color: lightcoral;
 }
 

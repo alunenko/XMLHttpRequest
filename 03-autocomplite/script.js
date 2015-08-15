@@ -1,9 +1,12 @@
 window.onload = initAll;
+
 var xhr = false,
-	colorsArray = [];
+	dataArray = [],
+	formField = "colorField",
+	url = "colors.xml";
 
 function initAll () {
-	document.getElementById("searchField").onkeyup = searchSuggest;
+	document.getElementById(formField).onkeyup = searchSuggest;
 
 	if (window.XMLHttpRequest) {
 		xhr = new XMLHttpRequest();
@@ -18,22 +21,25 @@ function initAll () {
 	}
 
 	if (xhr) {
-		xhr.onreadystatechange = setStatesArray;
-		xhr.open("GET", "colors.xml", true);
+		xhr.onreadystatechange = setDataArray;
+		xhr.open("GET", url, true);
 		xhr.send(null);
 	} else {
 		alert("Sorry, but I couldn't create an XMLHttpRequest");
 	}
 }
 
-function setStatesArray () {
+function setDataArray () {
+	var tag1 = "color",
+		tag2 = "name";
+
 	if (xhr.readyState == 4) {
 		if (xhr.status == 200) {
 			if (xhr.responseXML) {
-				var allColors = xhr.responseXML.getElementsByTagName("color");
+				var allData = xhr.responseXML.getElementsByTagName(tag1);
 
-				for (var i = 0; i < allColors.length; i++) {
-					colorsArray[i] = allColors[i].getElementsByTagName("name")[0].firstChild;
+				for (var i = 0; i < allData.length; i++) {
+					dataArray[i] = allData[i].getElementsByTagName(tag2)[0].firstChild.nodeValue;
 				};
 			}
 		} else {
@@ -45,21 +51,21 @@ function setStatesArray () {
 }
 
 function searchSuggest () {
-	var el_input = document.getElementById("searchField"),
+	var el_formField = document.getElementById(formField),
 		el_popups = document.getElementById("popups"),
-		str = el_input.value;
+		str = el_formField.value;
 
-	el_input.className = "";
+	el_formField.className = "";
 
 	if (str != "") {
 		el_popups.innerHTML = "";
 
-		for (var i = 0; i < colorsArray.length; i++) {
-			var thisState = colorsArray[i].nodeValue;
+		for (var i = 0; i < dataArray.length; i++) {
+			var thisField = dataArray[i];
 
-			if (thisState.toLowerCase().indexOf(str.toLowerCase()) == 0) {
+			if (thisField.toLowerCase().indexOf(str.toLowerCase()) == 0) {
 				var tempDiv = document.createElement("div");
-				tempDiv.innerHTML = thisState;
+				tempDiv.innerHTML = thisField;
 				tempDiv.onclick = makeChoise;
 				tempDiv.className = "suggestions";
 				el_popups.appendChild(tempDiv);
@@ -67,19 +73,20 @@ function searchSuggest () {
 		}
 
 		var foundCt = el_popups.childNodes.length;
-		(foundCt == 0) && (el_input.className = "error");
+		(foundCt == 0) && (el_formField.className = "error");
 		if (foundCt == 1) {
-			el_input.value = el_popups.firstChild.innerHTML;
-			el_popups.innerHTML = "";
+			setColor(el_popups.firstChild.innerHTML);
 		}
 	}
 }
 
 function makeChoise (e) {
 	var thisDiv = (e) ? e.target : window.event.srcElement;
-	var el_input = document.getElementById("searchField"),
-		el_popups = document.getElementById("popups");
+	setColor(thisDiv.innerHTML);
+}
 
-	el_input.value = thisDiv.innerHTML;
-	el_popups.innerHTML = "";
+function setColor(newColor) {
+	document.getElementById(formField).value = newColor;
+	document.bgColor = newColor;
+	document.getElementById("popups").innerHTML = "";
 }
