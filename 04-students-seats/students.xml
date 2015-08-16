@@ -1,178 +1,178 @@
 <?xml version="1.0"?>
 <students xml:lang="EN">
 	<student>
-		<seat>s01</seat>
+		<seat>s1</seat>
 		<firstName>Tom</firstName>
 		<lastName>Miller</lastName>
-		<redaingGroup>1</redaingGroup>
+		<readingGroup>1</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
-		<seat>s02</seat>
+		<seat>s2</seat>
 		<firstName>Sean</firstName>
 		<lastName>Albercht</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
-		<seat>s03</seat>
+		<seat>s3</seat>
 		<firstName>Chris</firstName>
 		<lastName>Anderson</lastName>
-		<redaingGroup>3</redaingGroup>
+		<readingGroup>3</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
-		<seat>s05</seat>
+		<seat>s5</seat>
 		<firstName>Jack</firstName>
 		<lastName>Rid</lastName>
-		<redaingGroup>4</redaingGroup>
+		<readingGroup>4</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
-		<seat>s06</seat>
+		<seat>s6</seat>
 		<firstName>Mike</firstName>
 		<lastName>Solton</lastName>
-		<redaingGroup>2</redaingGroup>
+		<readingGroup>2</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
-		<seat>s07</seat>
+		<seat>s7</seat>
 		<firstName>Jim</firstName>
 		<lastName>Piterson</lastName>
-		<redaingGroup>3</redaingGroup>
+		<readingGroup>3</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
-		<seat>s08</seat>
+		<seat>s8</seat>
 		<firstName>Jasy</firstName>
 		<lastName>Coin</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
-		<seat>s09</seat>
+		<seat>s9</seat>
 		<firstName>Sarah</firstName>
 		<lastName>Williams</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s10</seat>
 		<firstName>Joey</firstName>
 		<lastName>Hatch</lastName>
-		<redaingGroup>3</redaingGroup>
+		<readingGroup>3</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s11</seat>
 		<firstName>Matt</firstName>
 		<lastName>Stevenson</lastName>
-		<redaingGroup>1</redaingGroup>
+		<readingGroup>1</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s12</seat>
 		<firstName>Max</firstName>
 		<lastName>McCarthy</lastName>
-		<redaingGroup>1</redaingGroup>
+		<readingGroup>1</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
 		<seat>s13</seat>
 		<firstName>Bobie</firstName>
 		<lastName>Jeffers</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
 		<seat>s14</seat>
 		<firstName>Kelly</firstName>
 		<lastName>Staples</lastName>
-		<redaingGroup>4</redaingGroup>
+		<readingGroup>4</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s15</seat>
 		<firstName>Les</firstName>
 		<lastName>Flanders</lastName>
-		<redaingGroup>2</redaingGroup>
+		<readingGroup>2</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s16</seat>
 		<firstName>Kim</firstName>
 		<lastName>Hart</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
 		<seat>s17</seat>
 		<firstName>Jeff</firstName>
 		<lastName>Donlan</lastName>
-		<redaingGroup>3</redaingGroup>
+		<readingGroup>3</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s18</seat>
 		<firstName>Jamie</firstName>
 		<lastName>Carter</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s19</seat>
 		<firstName>Dana</firstName>
 		<lastName>Jones</lastName>
-		<redaingGroup>3</redaingGroup>
+		<readingGroup>3</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s20</seat>
 		<firstName>Chameron</firstName>
 		<lastName>Chen</lastName>
-		<redaingGroup>2</redaingGroup>
+		<readingGroup>2</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s21</seat>
 		<firstName>Tracy</firstName>
 		<lastName>Franclin</lastName>
-		<redaingGroup>1</redaingGroup>
+		<readingGroup>1</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
 		<seat>s22</seat>
 		<firstName>Sam</firstName>
 		<lastName>Roberts</lastName>
-		<redaingGroup>4</redaingGroup>
+		<readingGroup>4</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
-		<seat>s04</seat>
+		<seat>s4</seat>
 		<firstName>Richael</firstName>
 		<lastName>Lincoln</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
 		<seat>s23</seat>
 		<firstName>Lee</firstName>
 		<lastName>Hunter</lastName>
-		<redaingGroup>5</redaingGroup>
+		<readingGroup>5</readingGroup>
 		<lunchPeriod>late</lunchPeriod>
 	</student>
 	<student>
 		<seat>s24</seat>
 		<firstName>Jean</firstName>
 		<lastName>Chen</lastName>
-		<redaingGroup>4</redaingGroup>
+		<readingGroup>4</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 	<student>
 		<seat>s25</seat>
 		<firstName>Aaron</firstName>
 		<lastName>Simpson</lastName>
-		<redaingGroup>1</redaingGroup>
+		<readingGroup>1</readingGroup>
 		<lunchPeriod>early</lunchPeriod>
 	</student>
 </students>

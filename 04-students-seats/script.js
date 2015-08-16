@@ -36,7 +36,7 @@ function setDataArray() {
 	if (xhr.readyState == 4) {
 		if (xhr.status == 200) {
 			if (xhr.responseXML) {
-				var allData = xhr.responseXML.getElementsByTagName("student");debugger;
+				var allData = xhr.responseXML.getElementsByTagName("student");
 
 				for (var i = 0; i < allData.length; i++) {
 					var tempObj = new Object;
@@ -66,17 +66,17 @@ function featureOneItem(e) {
 	var allItems = document.getElementsByTagName("li");
 
 	for (var i = 0; i < allItems.length; i++) {
-		allItems[i].className = '';
+		allItems[i].className = "";
 	};
 
 	var theItem = (e) ? e.target : window.event.srcElement;
-	theItem.className = "pickedDiv";
+	theItem.className = "active";
 
-	var student = null;
+	var theStudent = null;
 
 	for (var i = 0; i < dataArray.length; i++) {
-		if(theDiv.id == dataArray[i].seat) {
-			student = dataArray[i];
+		if(theItem.id == dataArray[i].seat) {
+			theStudent = dataArray[i];
 		}
 	}
 
@@ -90,8 +90,8 @@ function featureOneItem(e) {
 		theMsg += "<br /> Reading Group: " + theStudent.readingGroup;
 		studentInfo.innerHTML = theMsg;
 
-		studentInfo.style.top = (theDiv.offsetTop-5) + "px";
-		studentInfo.style.left = (theDiv.offsetLeft-35) + "px";
+		studentInfo.style.top = (theItem.offsetTop-5) + "px";
+		studentInfo.style.left = (theItem.offsetLeft+50) + "px";
 		studentInfo.style.visibility = "visible";
 
 		document.getElementById("closeBox").onclick = function() {

@@ -30,6 +30,25 @@
 				list-style: none;
 				box-sizing: border-box;
 			}
+
+			.detail {
+				visibility: hidden;
+				position: absolute;
+				background-color: #FFF;
+				border: 1px solid;
+				z-index: 2;
+				width: 100px;
+				height: 100px;
+				overflow: hidden;
+				font-size: 0.6em;
+				padding: 5px;
+			}
+
+			.active {
+				z-index: 3;
+				background-color: #f00;
+				opacity: .2;
+			}
 		</style>
 		<script type="text/javascript" src="script.js"></script>
 	</head>
@@ -63,5 +82,7 @@
 				<li id="s25"></li>
 			</ul>
 		</div>
+
+		<div id="detail" class="detail"></div>
 	</body>
 </html>
