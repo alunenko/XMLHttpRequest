@@ -7,10 +7,12 @@ button {
 }
 
 .centerDiv {
-	height: 300px;
+	height: 250px;
+    min-width: 250px;
+    max-width: 250px;
 }
 
 .bigPic {
 	margin: 20px 100px;
-	padding-right: 200px;
+	width: 240px;
 }

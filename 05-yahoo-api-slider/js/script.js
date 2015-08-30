@@ -1,9 +1,9 @@
 window.onload = initAll;
 
 var allImgs,
-	currPic = 0;
+	currPic = 1;
 
-function initAll() {debugger;
+function initAll() {
 	var callback = {
 		success: function(xhr) {
 			storePix.innerHTML = xhr.responseText;
@@ -19,7 +19,7 @@ function initAll() {debugger;
 	var smallPix = document.getElementById("pictureBar");
 
 	YAHOO.util.Event.addListener(
-		document.getElementById("getPrew"), "click", function() {
+		document.getElementById("getPrev"), "click", function() {
 			runSlideshow(-1);
 		}
 	);
@@ -54,20 +54,20 @@ function runSlideshow(imgOffset) {
 
 	currPic += imgOffset;
 	switch (true) {
-		case (currPic == allImgs.length):
-			currPic = 0;
+		case (currPic == allImgs.length - 1):
+			currPic = 1;
 			break;
-		case (currPic < 0):
-			currPic = allImgs.length - 1;
+		case (currPic < 1):
+			currPic = allImgs.length - 2;
 			break;
 	}
 }
 
 function newSlideIn() {
 	var docPic = document.getElementById("pic" + currPic);
-	document.getElementById("picMover").src = docPic.src;
+	document.getElementById("bigPic").src = docPic.src;
 
-	var myAnim = new YAHOO.util.Motion(document.getElementById("picMover"));
+	var myAnim = new YAHOO.util.Motion(document.getElementById("bigPic"));
 	var theWidth = parseInt(docPic.getAttribute("width"));
 	var theHeight = parseInt(docPic.getAttribute("height"));
 
@@ -90,9 +90,9 @@ function newSlideIn() {
 
 function oldSlideOut() {
 	var docPic = document.getElementById("pic" + currPic);
-	document.getElementById("picMover").src = docPic.src;
+	document.getElementById("bigPic").src = docPic.src;
 
-	var myAnim = new YAHOO.util.Motion(document.getElementById("picMover"));
+	var myAnim = new YAHOO.util.Motion(document.getElementById("bigPic"));
 	var theWidth = parseInt(docPic.getAttribute("width"));
 	var theHeight = parseInt(docPic.getAttribute("height"));
 
