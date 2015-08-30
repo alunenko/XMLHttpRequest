@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Yahoo api slideshow</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<img id="picMover" 
+			 class="picMover"
+			 src="1.jpg"
+			 alt="storage"
+			 height="0"
+			 width="0">
+
+		<div id="centerDiv" class="centerDiv">
+			<button id="getPrev">Previous</button>
+			<img src="1.jpg"
+				 alt="slideshow"
+				 id="bigPic"
+				 class="bigPic"
+				 align="top">
+			<button id="getNext">Next</button>
+		</div>
+
+		<div id="pictureBar"></div>
+
+		<script src="http://yui.yahooapis.com/2.9.0/build/yahoo/yahoo-min.js"></script>
+		<script src="http://yui.yahooapis.com/2.9.0/build/animation/animation-min.js" type="text/javascript"></script>
+		<script src="http://yui.yahooapis.com/2.9.0/build/event/event-min.js" ></script>
+		<script src="http://yui.yahooapis.com/2.9.0/build/connection/connection_core-min.js"></script>
+		<script src="http://yui.yahooapis.com/2.9.0/build/dom/dom-min.js"></script>
+		<script src="http://yui.yahooapis.com/2.9.0/build/selector/selector-min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

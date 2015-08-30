@@ -1,0 +1,16 @@
+button {
+	margin: 100px 50px;
+}
+
+.picMover {
+	position: fixed;
+}
+
+.centerDiv {
+	height: 300px;
+}
+
+.bigPic {
+	margin: 20px 100px;
+	padding-right: 200px;
+}
